@@ -1,0 +1,41 @@
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $background-color;
+    margin-left: calc(-1 * $card-set-gap);
+    margin-top: calc(-1 * $card-set-gap);
+}
+
+.team__memder {
+    width: 270px;
+    margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
+    background: $primary-bgc-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+}
+
+.team__info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team__name {
+    font-weight: 500;
+    line-height: 1.18;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+
+.team__position {
+    line-height: 1.18;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+    margin-bottom: 16px;
+}

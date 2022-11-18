@@ -1,0 +1,13 @@
+body {
+    color: $title-text-color;
+    font-family: $primary-fonts;
+    font-size: 14px;
+    background-color: $primary-bgc-color;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,32 @@
+.button-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.button-menu__button {
+    border-radius: 4px;
+    border-color: transparent;
+    color: $title-text-color;
+    cursor: pointer;
+    background: $background-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.88;
+    padding: 6px 22px;
+    margin: 0 8px;
+    min-width: 73px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    transition: color 250ms $transitionCubic,
+        background-color 250ms $transitionCubic,
+        box-shadow 250ms $transitionCubic;
+
+        &:hover, &:focus{
+            background-color: $accent-color;
+            color: $primary-bgc-color;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+}

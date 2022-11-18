@@ -1,0 +1,31 @@
+.socials-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socials-list__icon {
+    fill: currentColor;
+}
+
+.socials-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    color: $primary-svg-color;
+    transition: color 250ms $transitionCubic,
+        background-color 250ms $transitionCubic;
+
+        &:hover, &:focus {
+            background-color: $accent-color;
+            color: $primary-bgc-color;
+        }
+}
+
+.socials-list__link—dark-background {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $primary-bgc-color;
+}

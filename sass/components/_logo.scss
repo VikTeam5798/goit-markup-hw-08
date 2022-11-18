@@ -1,0 +1,18 @@
+.logo {
+    color: $accent-color;
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-right: 95px;
+}
+
+.logo__accent {
+    color: $title-text-color;
+}
+
+.logo__accent--white {
+    color: $primary-bgc-color;
+}

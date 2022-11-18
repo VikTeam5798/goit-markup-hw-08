@@ -1,0 +1,26 @@
+.address__list:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__list:first-child {
+    margin-top: 20px;
+}
+
+.address__link {
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms $transitionCubic;
+
+    &:hover, &:focus{
+        color: $accent-color;
+    }
+}
+
+.address__map {
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-bgc-color;
+}
