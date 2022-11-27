@@ -44,7 +44,11 @@
             </li>
           </ul>
         </nav>
-
+        <button type="button" class="menu-button" open-menu>
+          <svg height="40" width="40" aria-label="Перемикач мобільного меню">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
         <ul class="contacts">
           <li class="contacts__list">
             <a class="contacts__link link" href="mailto:info@devstudio.com"
@@ -64,12 +68,80 @@
           </li>
         </ul>
       </div>
+      <!-- Мобільне меню -->
+      <div class="mobile-menu" menu-container aria-expanded="false">
+        <button type="button" class="menu-close" close-menu>
+          <svg height="40" width="40">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container">
+          <div class="mob-menu-top">
+            <ul class="mob-nav__list">
+              <li class="mob-nav__item">
+                <a
+                  class="mob-nav__link mob-nav__link--current link"
+                  href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link link" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link link" href="">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mob-menu-bottom">
+            <ul class="contacts-menu">
+              <li class="contacts-menu__list">
+                <a
+                  class="contacts-menu__link link"
+                  href="mailto:info@devstudio.com"
+                  ><svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-menu__list">
+                <a class="contacts-menu__link link" href="tell:+380961111111"
+                  ><svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+
+            <ul class="menu-social">
+              <li class="menu-social__list">
+                <a href="" class="menu-social__link link">Instagram</a>
+              </li>
+              <li class="menu-social__list">
+                <a href="" class="menu-social__link link">Twitter</a>
+              </li>
+              <li class="menu-social__list">
+                <a href="" class="menu-social__link link">Facebook</a>
+              </li>
+              <li class="menu-social__list">
+                <a href="" class="menu-social__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <!-- Герой -->
     <main>
+      <!-- Герой -->
       <section class="section-hero section-hero--overlay">
-        <div class="container">
+        <div class="container-hero">
           <h1 class="section-hero__title">
             Ефективні рішення для вашого бізнесу
           </h1>
@@ -146,11 +218,19 @@
           <ul class="whatwedo">
             <li>
               <div class="whatwedo__thumb">
-                <img
-                  src="./images/img1.jpg"
-                  alt="Людина працює за комп'ютером"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/whatwedo-1-320.jpg 1x,
+                      ./images/whatwedo-1-640.jpg 2x,
+                      ./images/whatwedo-1-960.jpg 3x
+                    " />
+                  <img
+                    src="./images/whatwedo-1-320.jpg"
+                    alt="Людина працює за комп'ютером"
+                    width="370"
+                /></picture>
                 <div class="whatwedo__description">
                   <p>Десктопні додатки</p>
                 </div>
@@ -158,21 +238,37 @@
             </li>
             <li>
               <div class="whatwedo__thumb">
-                <img
-                  src="./images/img2.jpg"
-                  alt="Людина працює на телефоні"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/whatwedo-2-320.jpg 1x,
+                      ./images/whatwedo-2-640.jpg 2x,
+                      ./images/whatwedo-2-960.jpg 3x
+                    " />
+                  <img
+                    src="./images/whatwedo-2-320.jpg"
+                    alt="Людина працює на телефоні"
+                    width="370"
+                /></picture>
                 <div class="whatwedo__description"><p>Мобільні додатки</p></div>
               </div>
             </li>
             <li>
               <div class="whatwedo__thumb">
-                <img
-                  src="./images/img3.jpg"
-                  alt="Людина працює на планшеті"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/whatwedo-3-320.jpg 1x,
+                      ./images/whatwedo-3-640.jpg 2x,
+                      ./images/whatwedo-3-960.jpg 3x
+                    " />
+                  <img
+                    src="./images/whatwedo-3-320.jpg"
+                    alt="Людина працює на планшеті"
+                    width="370"
+                /></picture>
                 <div class="whatwedo__description">
                   <p>Дизайнерські рішення</p>
                 </div>
@@ -190,11 +286,32 @@
           <ul class="team">
             <li class="team__memder">
               <div class="team__thumb">
-                <img
-                  src="./images/team-img1.jpg"
-                  alt="Учасник команди"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    media="(max-width:767px)"
+                    srcset="
+                      ./images/team-member-mob-1-320.jpg 1x,
+                      ./images/team-member-mob-1-640.jpg 2x,
+                      ./images/team-member-mob-1-960.jpg 3x
+                    " />
+                  <source
+                    media="(max-width:1199px)"
+                    srcset="
+                      ./images/team-member-tablet-1-320.jpg 1x,
+                      ./images/team-member-tablet-1-640.jpg 2x,
+                      ./images/team-member-tablet-1-960.jpg 3x
+                    " />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/team-member-desc-1-320.jpg 1x,
+                      ./images/team-member-desc-1-640.jpg 2x,
+                      ./images/team-member-desc-1-960.jpg 3x
+                    " />
+                  <img
+                    src="./images/team-memder-mob-1-320.jpg"
+                    alt="Учасник команди"
+                /></picture>
               </div>
               <div class="team__info">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
@@ -259,11 +376,32 @@
 
             <li class="team__memder">
               <div class="team__thumb">
-                <img
-                  src="./images/team-img2.jpg"
-                  alt="Учасник команди"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    media="(max-width:767px)"
+                    srcset="
+                      ./images/team-member-mob-2-320.jpg 1x,
+                      ./images/team-member-mob-2-640.jpg 2x,
+                      ./images/team-member-mob-2-960.jpg 3x
+                    " />
+                  <source
+                    media="(max-width:1199px)"
+                    srcset="
+                      ./images/team-member-tablet-2-320.jpg 1x,
+                      ./images/team-member-tablet-2-640.jpg 2x,
+                      ./images/team-member-tablet-2-960.jpg 3x
+                    " />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/team-member-desc-2-320.jpg 1x,
+                      ./images/team-member-desc-2-640.jpg 2x,
+                      ./images/team-member-desc-2-960.jpg 3x
+                    " />
+                  <img
+                    src="./images/team-memder-mob-2-320.jpg"
+                    alt="Учасник команди"
+                /></picture>
               </div>
               <div class="team__info">
                 <h3 class="team__name">Ольга Рєпіна</h3>
@@ -328,11 +466,32 @@
 
             <li class="team__memder">
               <div class="team__thumb">
-                <img
-                  src="./images/team-img3.jpg"
-                  alt="Учасник команди"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    media="(max-width:767px)"
+                    srcset="
+                      ./images/team-member-mob-3-320.jpg 1x,
+                      ./images/team-member-mob-3-640.jpg 2x,
+                      ./images/team-member-mob-3-960.jpg 3x
+                    " />
+                  <source
+                    media="(max-width:1199px)"
+                    srcset="
+                      ./images/team-member-tablet-3-320.jpg 1x,
+                      ./images/team-member-tablet-3-640.jpg 2x,
+                      ./images/team-member-tablet-3-960.jpg 3x
+                    " />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/team-member-desc-3-320.jpg 1x,
+                      ./images/team-member-desc-3-640.jpg 2x,
+                      ./images/team-member-desc-3-960.jpg 3x
+                    " />
+                  <img
+                    src="./images/team-memder-mob-3-320.jpg"
+                    alt="Учасник команди"
+                /></picture>
               </div>
               <div class="team__info">
                 <h3 class="team__name">Микола Тарасов</h3>
@@ -397,11 +556,32 @@
 
             <li class="team__memder">
               <div class="team__thumb">
-                <img
-                  src="./images/team-img4.jpg"
-                  alt="Учасник команди"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    media="(max-width:767px)"
+                    srcset="
+                      ./images/team-member-mob-4-320.jpg 1x,
+                      ./images/team-member-mob-4-640.jpg 2x,
+                      ./images/team-member-mob-4-960.jpg 3x
+                    " />
+                  <source
+                    media="(max-width:1199px)"
+                    srcset="
+                      ./images/team-member-tablet-4-320.jpg 1x,
+                      ./images/team-member-tablet-4-640.jpg 2x,
+                      ./images/team-member-tablet-4-960.jpg 3x
+                    " />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/team-member-desc-4-320.jpg 1x,
+                      ./images/team-member-desc-4-640.jpg 2x,
+                      ./images/team-member-desc-4-960.jpg 3x
+                    " />
+                  <img
+                    src="./images/team-memder-mob-4-320.jpg"
+                    alt="Учасник команди"
+                /></picture>
               </div>
               <div class="team__info">
                 <h3 class="team__name">Михайло Єрмаков</h3>
@@ -522,7 +702,7 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="footer__container">
-        <div class="info">
+        <div class="footer__info">
           <a class="logo link" href="./index.html"
             >Web<span class="logo__accent--white">Studio</span></a
           >
@@ -701,5 +881,6 @@
       </div>
     </div>
     <script src="./modal.js"></script>
+    <script src="./menu.js"></script>
   </body>
 </html>

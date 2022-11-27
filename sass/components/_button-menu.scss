@@ -1,7 +1,20 @@
 .button-menu {
     display: flex;
-    justify-content: center;
     margin-bottom: 50px;
+    @media screen  and(min-width:480px){
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        grid-row-gap: 15px;
+    }
+
+        @media screen and(max-width:480px) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            grid-row-gap: 15px;
+        }
+        @media screen and(min-width:768px) {
+            justify-content: center;
+        }
 }
 
 .button-menu__button {

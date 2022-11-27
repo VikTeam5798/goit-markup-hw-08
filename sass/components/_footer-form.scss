@@ -8,15 +8,24 @@
     margin-bottom: 20px;
 }
 
+.form{
+    @media screen and(min-width:768px) {
+        width: 450px;
+    }
+        @media screen and(min-width:1200px) {
+            width: 570px;
+        }
+}
+
 .form__icon {
     margin-left: 10px;
 }
 
 .form__input {
-    width: 358px;
-    margin-right: 8px;
-    padding: 15px 16px;
 
+
+    padding: 15px 16px;
+    margin-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -27,6 +36,17 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+
+    @media screen and(max-width:480px) {
+        width: 90%;
+    }
+
+    @media screen and(min-width:480px) {
+        width: 450px;
+    }
+    @media screen and(min-width:1200px) {
+        width: 356px;
+    }
 }
 
 .form__button {
@@ -48,9 +68,10 @@
     background-color: $accent-color;
     transition: box-shadow 250ms $transitionCubic;
 
-    &:hover, &:focus{
+    &:hover,
+    &:focus {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
-        }
-    
+    }
+
 }

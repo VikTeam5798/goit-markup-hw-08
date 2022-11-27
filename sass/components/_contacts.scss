@@ -1,9 +1,23 @@
 .contacts__icon {
     fill: currentColor;
-    margin-right: 10px;
 
     &:hover, &:focus{
         color: $accent-color;
+    }
+
+        @media screen and(max-width:767px) {
+            display: none;
+        }
+    
+    @media screen and(min-width:768px) {
+        margin-right: 8px;
+        width: 14px;
+        height: 10px;
+    }
+    @media screen and(min-width:1200px) {
+        margin-right: 10px;
+        width: 16px;
+            height: 12px;
     }
 }
 
@@ -12,9 +26,18 @@
 }
 
 .contacts {
-    display: flex;
-    margin-left: auto;
-    gap: 30px;
+    @media screen and(min-width:768px) {
+        gap: 10px;
+    }
+    @media screen and(min-width:1200px) {
+        display: flex;
+            margin-left: auto;
+            gap: 30px;
+    }
+    
+    @media screen and(max-width:767px) {
+            display: none;
+        }
 }
 
 .contacts__link {
@@ -30,4 +53,11 @@
     &:hover, &:focus{
         color: $accent-color;
     }
+
+    @media screen and(min-width:768px) {
+        font-size: 12px;
+    }
+        @media screen and(min-width:1200px) {
+            font-size: 14px;
+        }
 }

@@ -42,7 +42,11 @@
             </li>
           </ul>
         </nav>
-
+        <button type="button" class="menu-button" open-menu>
+          <svg height="40" width="40" aria-label="Перемикач мобільного меню">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
         <ul class="contacts">
           <li class="contacts__list">
             <a class="contacts__link link" href="mailto:info@devstudio.com"
@@ -61,6 +65,64 @@
             >
           </li>
         </ul>
+      </div>
+      <!-- Мобільне меню -->
+      <div class="mobile-menu" menu-container aria-expanded="false">
+        <button type="button" class="menu-close" close-menu>
+          <svg height="40" width="40">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container">
+          <div class="mob-menu-top">
+            <ul class="mob-nav__list">
+              <li class="mob-nav__item">
+                <a class="mob-nav__link link" href="./index.html">Студія</a>
+              </li>
+              <li class="mob-nav__item">
+                <a
+                  class="mob-nav__link mob-nav__link--current link"
+                  href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link link" href="">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mob-menu-bottom">
+            <ul class="contacts-menu">
+              <li class="contacts-menu__list">
+                <a
+                  class="contacts-menu__link link"
+                  href="mailto:info@devstudio.com"
+                  ><svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-menu__list">
+                <a class="contacts-menu__link link" href="tell:+380961111111"
+                  ><svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+
+            <ul class="menu-social">
+              <li><a href="" class="menu-social__link link">Instagram</a></li>
+              <li><a href="" class="menu-social__link link">Twitter</a></li>
+              <li><a href="" class="menu-social__link link">Facebook</a></li>
+              <li><a href="" class="menu-social__link link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -96,11 +158,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./images/ptf1img.jpg"
-                    alt="Ноутбук з відкритим сайтом"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-1-MOB/portf-1-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-1-MOB/portf-1-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-1-TABLET/portf-1-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-1-TABLET/portf-1-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-1-DESC/portf-1-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-1-DESC/portf-1-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-1-MOB/portf-1-mob-320.jpg"
+                      alt="Ноутбук з відкритим сайтом"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -121,11 +201,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./images/ptf2img.jpg"
-                    alt="Два баскетболісти"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-2-MOB/portf-2-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-2-MOB/portf-2-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-2-TABLET/portf-2-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-2-TABLET/portf-2-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-2-DESC/portf-2-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-2-DESC/portf-2-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-2-MOB/portf-2-mob-320.jpg"
+                      alt="Два баскетболісти"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -147,11 +245,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./images/ptf3img.jpg"
-                    alt="Логотип Ресторану"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-3-MOB/portf-3-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-3-MOB/portf-3-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-3-TABLET/portf-3-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-3-TABLET/portf-3-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-3-DESC/portf-3-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-3-DESC/portf-3-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-3-MOB/portf-3-mob-320.jpg"
+                      alt="Логотип Ресторану"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -171,11 +287,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./images/ptf4img.jpg"
-                    alt="Накладні навушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-4-MOB/portf-4-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-4-MOB/portf-4-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-4-TABLET/portf-4-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-4-TABLET/portf-4-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-4-DESC/portf-4-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-4-DESC/portf-4-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-4-MOB/portf-4-mob-320.jpg"
+                      alt="Накладні навушники"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -195,11 +329,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./images/ptf5img.jpg"
-                    alt="Дві коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-5-MOB/portf-5-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-5-MOB/portf-5-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-5-TABLET/portf-5-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-5-TABLET/portf-5-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-5-DESC/portf-5-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-5-DESC/portf-5-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-5-MOB/portf-5-mob-320.jpg"
+                      alt="Дві коробки"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -219,7 +371,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img src="./images/ptf6img.jpg" alt="Монітор" width="370" />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-6-MOB/portf-6-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-6-MOB/portf-6-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-6-TABLET/portf-6-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-6-TABLET/portf-6-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-6-DESC/portf-6-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-6-DESC/portf-6-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-6-MOB/portf-6-mob-320.jpg"
+                      alt="Монітор"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -239,7 +413,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img src="./images/ptf7img.jpg" alt="Книга" width="370" />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-7-MOB/portf-7-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-7-MOB/portf-7-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-7-TABLET/portf-7-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-7-TABLET/portf-7-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-7-DESC/portf-7-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-7-DESC/portf-7-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-7-MOB/portf-7-mob-320.jpg"
+                      alt="Книга"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -259,7 +455,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img src="./images/ptf8img.jpg" alt="Бірка" width="370" />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-8-MOB/portf-8-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-8-MOB/portf-8-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-8-TABLET/portf-8-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-8-TABLET/portf-8-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-8-DESC/portf-8-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-8-DESC/portf-8-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-8-MOB/portf-8-mob-320.jpg"
+                      alt="Бірка"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -279,11 +497,29 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./images/ptf9img.jpg"
-                    alt="Чоловік пише на наутбуці"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width:767px)"
+                      srcset="
+                        ./images/Portf/PORTF-9-MOB/portf-9-mob-320.jpg 1x,
+                        ./images/Portf/PORTF-9-MOB/portf-9-mob-640.jpg 2x
+                      " />
+                    <source
+                      media="(max-width:1199px)"
+                      srcset="
+                        ./images/Portf/PORTF-9-TABLET/portf-9-tablet-320.jpg 1x,
+                        ./images/Portf/PORTF-9-TABLET/portf-9-tablet-640.jpg 2x
+                      " />
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="
+                        ./images/Portf/PORTF-9-DESC/portf-9-desc-320.jpg 1x,
+                        ./images/Portf/PORTF-9-DESC/portf-9-desc-640.jpg 2x
+                      " />
+                    <img
+                      src="./images/Portf/PORTF-9-MOB/portf-9-mob-320.jpg"
+                      alt="Чоловік пише на наутбуці"
+                  /></picture>
                   <div class="card-set__description">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -307,7 +543,7 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="footer__container">
-        <div class="info">
+        <div class="footer__info">
           <a class="logo link" href="./index.html"
             >Web<span class="logo__accent--white">Studio</span></a
           >
@@ -405,5 +641,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./menu.js"></script>
   </body>
 </html>

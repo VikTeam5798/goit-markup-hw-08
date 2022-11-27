@@ -23,7 +23,6 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  min-width: 528px;
   min-height: 581px;
   padding: 40px;
   background-color: $primary-bgc-color;
@@ -36,6 +35,13 @@
     .backdrop.is-hidden &{
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;
+    }
+
+    @media screen and(max-width: 1199px) {
+      width: 450px;
+    }
+    @media screen and(min-width:1200px) {
+      width: 528px;
     }
 }
 
@@ -133,10 +139,16 @@
   justify-content: center;
   align-items: center;
 
-  font-size: 14px;
+  
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $primary-text-color;
+  @media screen and(min-width:480px) {
+    font-size: 12px;
+  }
+  @media screen and(min-width:1200px) {
+    font-size: 14px;
+  }
 }
 
 .checkbox__icon {

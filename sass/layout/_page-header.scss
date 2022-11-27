@@ -1,11 +1,37 @@
 .header {
     border-bottom: 1px solid #ececec;
+    margin: auto;
+    @media screen and(min-width:480px) {
+            width: 480px;
+        }
+    
+        @media screen and(min-width: 768px) {
+            width: 768px;
+        }
+        @media screen and(min-width:1200px) {
+            width: 1200px;
+        }
 }
 
 .header__container {
     display: flex;
-    padding: 24px 0;
-    width: 1200px;
+    padding: 24px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and(min-width:480px) {
+        width: 480px;
+    }
+
+    @media screen and(min-width: 768px) {
+        width: 768px;
+        gap: 96px;
+        padding: 21px 15px;
+    }
+
+    @media screen and(min-width:1200px) {
+        width: 1200px;
+        padding: 24px 15px;
+    }
+    
 }

@@ -1,14 +1,35 @@
 .section-team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: auto;
+
+    @media screen and(min-width: 480px) {
+        width: 480px;
+        padding: 60px 15px;
+        
+    }
+
+        @media screen and(min-width: 768px) {
+            width: 768px;
+            padding: 60px 15px;
+            overflow: hidden;
+        }
+
+        @media screen and(min-width:1200px) {
+            width: 1200px;
+        }
 }
 
 .section-team__title {
-    font-size: 36px;
     line-height: 1.16;
+    font-size: 28px;
+    margin-bottom: 30px;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
     text-align: center;
+    @media screen and(min-width:1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
 }
 
 .section-team--white {

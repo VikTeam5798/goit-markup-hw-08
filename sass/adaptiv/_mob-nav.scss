@@ -1,0 +1,23 @@
+.mob-nav__link {
+    font-size: 40px;
+    line-height: calc(47/40);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+    transition: color 250ms $transitionCubic;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &--current {
+        color: $accent-color;
+    }
+
+}
+
+.mob-nav__item {
+    margin-bottom: 32px;
+}
