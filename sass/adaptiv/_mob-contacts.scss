@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column-reverse;
     gap: 32px;
-    margin-bottom: 64px;
+    margin-bottom: 44px;
 }
 
 .contacts-menu__link {
@@ -10,14 +10,15 @@
     line-height: calc(28/24);
     letter-spacing: 0.02em;
     color: $primary-text-color;
-    transition: color 250ms $transitionCubic, font-size 250ms $transitionCubic;
-
-    &:hover,
-    &:focus {
-        font-size: 34px;
-        line-height: calc(40/34);
-        letter-spacing: 0.02em;
+    &:hover, &:focus{
         color: $accent-color;
     }
 
+}
+
+.contacts-menu__link--accent {
+    font-size: 34px;
+    line-height: calc(40/34);
+    letter-spacing: 0.02em;
+    color: $accent-color;
 }

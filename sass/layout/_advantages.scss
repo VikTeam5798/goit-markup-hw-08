@@ -48,6 +48,9 @@
     margin-bottom: 10px;
     font-size: 14px;
     text-transform: uppercase;
+    @media screen and(min-width:768px) {
+        text-align: left;
+    }
 }
 
 .advantages__text {
@@ -55,4 +58,10 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-align: left;
+}
+
+.container__advantages{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
 }

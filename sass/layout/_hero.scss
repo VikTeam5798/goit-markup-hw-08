@@ -22,13 +22,17 @@
 }
 
 .container-hero{
+    @media screen and(min-width:480px) {
+            width: 480px;
+            margin: 0 auto;
+        }
     @media screen and(min-width:768px) {
-        width: 360px;
+        width: 768px;
         margin: 0 auto;
     }
 
     @media screen and(min-width:1200px) {
-        width: 696px;
+        width: 1200px;
     }
 }
 
@@ -36,18 +40,9 @@
     background: #2f303a;
     text-align: center;
     padding: 118px 0px;
-    
 
-    @media screen and(min-width: 480px) {
-            width: 480px;
-        }
-
-        @media screen and(min-width: 768px) {
-            width: 768px;
-        }
         @media screen and(min-width:1200px) {
             padding: 200px 15px;
-            width: 1200px;
         }
 }
 
@@ -109,8 +104,12 @@
     text-transform: uppercase;
     margin: 0 auto;
     color: $primary-bgc-color;
+    @media screen and(min-width:768px) {
+        width: 360px;
+    }
 
     @media screen and(min-width:1200px) {
+        width: 696px;
         font-size: 44px;
     }
     

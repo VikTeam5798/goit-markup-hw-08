@@ -2,30 +2,11 @@
     position: relative;
     display: inline-flex;
     flex-wrap: wrap;
-    
-    
-    // gap: 20px;
-
-    // &:not(:last-child) {
-    //     border-right: 1px solid $primary-text-color;
-    //     //    .menu-social__link::before {
-    //     //     content: "";
-    //     //     width: 1px;
-    //     //     height: 100%;
-    //     //     color: $primary-text-color;
-    //     // }
-    //     }
 }
-// .menu-social__list::before {
-//     position: absolute;
-//     content: "";
-//     width: 1px;
-//     height: 100%;
-//     color: $primary-text-color;
-//     right: 10px;
-// }
+
 .menu-social__list{
     padding: 0 10px;
+    margin-top: 20px;
     
         &:not(:last-child) {
             border-right: 1px solid $primary-text-color;
@@ -37,7 +18,5 @@
     line-height: calc(22/18);
     letter-spacing: 0.02em;
     color: $accent-color;
-    
-    
     
 }
